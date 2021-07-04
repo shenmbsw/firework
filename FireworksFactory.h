@@ -7,7 +7,7 @@
 
 #include "vector"
 #include "ShootFlower.h"
-#include "opencv4/opencv2/opencv.hpp"
+#include "opencv2/opencv.hpp"
 #include "thread"
 #include "array"
 #define WND_WIDTH  1900
