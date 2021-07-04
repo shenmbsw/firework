@@ -13,11 +13,11 @@
 #define ONE_FLOWER_HIG 240
 
 enum ShootColor {
-    GREEN = 1,
-    ORANGE = 2,
-    BLUE = 3,
-    PURPLE = 4,
-    YELLOW = 5,
+    GREEN = 0,
+    ORANGE = 1,
+    BLUE = 2,
+    PURPLE = 3,
+    YELLOW = 4,
 };
 
 class Shoot {
@@ -27,11 +27,11 @@ public:
     int max_height{};
     bool show = false;
     bool is_bright = false;
-    ShootColor shoot_color{};
+    int shoot_color{};
     std::chrono::high_resolution_clock::time_point t_start, t_now;
     std::chrono::high_resolution_clock::duration dt{}; // time duration for one process
     Shoot() = default;
-    int resetShoot(int max_height, int x, int y);
+    int resetShoot(int max_height, int x, int y, int state=0);
     int get_show_x() const;
     int get_show_y() const;
 
